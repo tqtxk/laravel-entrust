@@ -11,6 +11,7 @@
 |
 */
 
-Route::resource('/', "Controller");
+Route::get('/login', "Auth\LoginController@showLoginForm");
+Route::post('/login', "Auth\LoginController@login");
 Route::resource('photo', 'PhotoController');
 Route::resource('photo.comment', 'PhotoCommentController');
